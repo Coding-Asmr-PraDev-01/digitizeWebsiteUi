@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.2;
+}
+
+html{
+    font-family: 'Aldrich', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root{
+    --primary-color: #d5ff3f;
+    --dark-color: #101010;
+    --dark-color-2: #171717;
+    --white-color: #ffffff;
+    --white-color-2: #c4c4c4;
+    --text-faint-color: #5f5f5f;
+    --white-color-3: #292929;
+    --common-padding: 1rem 8rem;
+}
+
+.icon{
+    width: 16px;
+}   
+
+.container .topBanner{
+    padding: var(--common-padding);
+    background-color: var(--primary-color);
+    padding-bottom: 0;
+}
+
+.container .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.container .navigation .logoBx h1{
+    font-size: 3.4rem;
+}
+
+.container .navigation .nav-items{
+    display: flex;
+    gap: 1rem;
+}
+
+.container .navigation .nav-items li a{
+    font-size: 1.5rem;
+}
+
+.container .topBanner .textBx .contentBx .mainHeading{
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 0.8;
+}    
+
+.container .topBanner .textBx{
+    position: relative;
+    /* background-color: red; */
+    margin: 3rem 0 1rem 0;
+}
+
+.container .topBanner .textBx::before, .container .topBanner .textBx::after{
+    content: '';
+    position: absolute;
+    top: -20px; left: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+}
+
+.container .topBanner .textBx::after{
+    left: 30px;
+}
+
+.container .topBanner .textBx .contentBx:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .topBanner .textBx .contentBx{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.container .topBanner .textBx .contentBx .infoText{
+    max-width: 400px;
+}
+
+.container .topBanner .textBx .contentBx .infoText p{
+    font-size: 1.2rem;
+}
+
+.container .topBanner .textBx .contentBx .playBx{
+    background-image: url('./imgs/video-thumbnail.PNG');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 260px;
+    height: 60px;
+    border-radius: 2rem;   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container .topBanner .textBx .contentBx .playBx .videoPlayBx{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    margin-left: 0.4rem;
+    line-height: 52px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.container .navigation .nav-items .nav-item a{
+    color: #123;
+}
+
+.btnsBx{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    border: 1px solid var(--dark-color-2);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+
+/* .container .topBanner .btnsBx .btn:hover{
+    background-color: red;
+} */
+
+.container .topBanner .imageContainer{
+    position: relative;
+    max-width: 100%;
+    margin-top: 3rem;
+}
+
+.container .topBanner .imageContainer .imgBx{
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    width: 100%;
+    position: relative;
+    height: 450px;  
+    overflow: hidden;
+}
+
+.container .topBanner .imageContainer .imgBx img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+} 
+
+.container .topBanner .imageContainer .arrow-btn{
+    position: absolute;
+    top: -2rem; 
+    right: 3rem;   
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-color);
+    border: 7px solid var(--dark-color-2);
+}
+
+.container .topBanner .imageContainer .arrow-btn img{
+    width: 35px;
+}
+
+.container .labelBx{
+    background-color: var(--dark-color);
+    padding: var(--common-padding);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.container .labelBx h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 1000;
+    color: var(--primary-color);
+}
+
+/* .container .labelBx img{
+    max-width: 100%;
+} */
+
+
+.container .servicesBx .rightBx, .projectsBx .rightBx{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    /* justify-self: flex-end; */
+    justify-content: flex-end;
+}
+
+.container .servicesBx, .projectsBx {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    color: #fff;
+    background-color: var(--dark-color-2);
+    /* background-color: red; */
+    padding: var(--common-padding);
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+/* .container hr{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+} */
+
+.container .servicesBx .leftBx{
+    flex: 0 0 50%;
+}
+
+.container .servicesBx .rightBx {
+    flex: 0 0 40%;
+}
+
+.para-text{
+    opacity: 0.3;
+    margin: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.container .servicesBx .rightBx .btn, .projectsBx .rightBx .btn{
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    opacity: 0.5;
+}
+
+.container .rightBx .btn:hover{
+    opacity: 1;
+}
+
+.container .rightBx .btn img{
+    filter: invert(100%);
+}
+
+.subHeading{
+    position: relative;
+    font-size: 4rem;
+    font-weight: 1000;
+    line-height: 1;
+    text-transform: uppercase; 
+}
+
+.subHeading::before{
+    content: '';
+    position: absolute;
+    bottom: 17px;
+    right: 66px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+
+.skillsBx{
+    background-color: var(--dark-color-2);
+    padding: var(--common-padding);
+}
+
+.skillsBx .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-faint-color);
+    cursor: pointer;
+    padding: 1.5rem;
+    transition: 0.4s ease;
+    /* background-color: pink; */
+    border-top: 1px solid var(--text-faint-color);
+    margin: 0.2rem 0;
+}
+
+.skillsBx .box:last-child{
+    border-bottom: 1px solid var(--text-faint-color);
+}
+
+.skillsBx .box:hover{
+    color: var(--white-color);
+    background-color: var(--white-color-3);
+}
+
+.skillsBx .box:hover h1::before{
+    display: block;
+}
+
+.skillsBx .box h1{
+    position: relative;
+    font-size: 1.8rem;
+}
+
+.skillsBx .box h1::before{
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: 1rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: none;
+    background-color: var(--primary-color);
+}
+
+.arrowBx{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.skillsBx .box:hover .arrowBx{
+    background-color: var(--primary-color);
+}
+
+.skillsBx .box:hover .arrowBx i{
+    color: var(--dark-color);
+}
+
+.arrowBx i{
+    transform: rotate(45deg);
+    font-size: 2rem;
+}
+
+
+.ideologoyTextBx {
+    background-color: var(--white-color-3);
+    border: 30px solid var(--dark-color-2);
+    padding: 3.6rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+}
+
+.ideologoyTextBx h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--white-color);
+}
+
+.ideologoyTextBx h2 .imgBx{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.ideologoyTextBx h2:nth-child(2) .imgBx{
+    width: 70px;
+}
+
+.ideologoyTextBx h2:nth-child(3) .imgBx{
+    width: 60px;
+    background-color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 60px; */
+}
+
+.ideologoyTextBx h2:last-child .imgBx{
+    width: 80px ;    
+    background-color: red;
+}
+
+.ideologoyTextBx h2:nth-child(3) .imgBx i{
+    transform: rotate(45deg);
+    font-size: 2rem;
+    color: var(--dark-color);
+}
+
+
+.ideologoyTextBx h2 .imgBx img{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.projectsBx{
+    flex-direction: column;
+}
+
+.projectsBx .rightBx{
+    align-self: flex-start;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* height: 450px;   */
+    grid-gap: 1rem;
+    padding: var(--common-padding);
+    /* padding-top: 4rem;
+    padding-bottom: 4rem; */
+    background-color: var(--dark-color);
+    /* margin-bottom: 1.5rem; */
+}
+
+.gridContainer .gridBx:nth-child(1){
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.gridContainer .gridBx:nth-child(2){
+    grid-column: 2 / 4;
+}
+
+.gridContainer .gridBx{
+    position: relative;
+    /* height: 400px; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gridContainer .gridBx:hover .contentBx{
+    opacity: 1;
+}
+
+.gridContainer .gridBx .contentBx .arrowBx{
+    display: block;
+    background-color: var(--primary-color);
+}
+
+.gridContainer .gridBx .contentBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.gridContainer .gridBx .contentBx .content{
+    padding: 1.5rem;
+}
+
+.gridContainer .gridBx .contentBx .content p{
+    color: var(--text-faint-color);
+}
+
+.gridContainer .gridBx .contentBx .content h3{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.gridBx img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.contactBx{
+    padding: var(--common-padding); 
+    background-color: var(--dark-color);
+}
+
+.contactBx .contactText{
+    background-color: var(--primary-color);
+    padding: var(--common-padding);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    text-align: center;
+}
+
+.contactBx .contactText .btnsBx{
+    /* background-color: red; */
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+
+.contactBx .contactText .btnsBx .btn{
+    transition: 0.6s ease-in;
+}
+
+.contactBx .contactText .btnsBx .btn:hover{ 
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+    background-color: var(--dark-color);
+}
+
+.footer{
+    background-color: var(--dark-color);
+    padding: var(--common-padding);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.footer .footerText{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+
+@media(max-width: 991px){
+    :root{
+        --common-padding: 1rem 3rem;
+    }
+
+    html{
+        font-size: 75%;
+    }
+}
+
+@media(max-width: 768px){
+    :root{
+        --common-padding: 1rem 3rem;
+    }
+
+    html{
+        font-size: 55%;
+    }
+
+    .container .navigation {
+        flex-direction: column;   
+    }
+
+    .container .topBanner .imageContainer .arrow-btn{   
+        width: 70px;
+        height: 70px;
+    }
+
+    .container .topBanner .imageContainer .imgBx{
+        height: 300px;
+    }
+
+    .container .servicesBx .leftBx{
+        flex: 0 0 100%;
+    }
+    
+    .container .servicesBx .rightBx {
+        flex: 0 0 100%;
+    }
+
+    .ideologoyTextBx{
+        border: 10px solid var(--dark-color-2);
+    }
+}
+
+@media(max-width: 450px){
+    :root{
+        --common-padding: 1rem 1.4rem;
+    }
+
+    html{
+        font-size: 50%;
+    }
+
+    .mainHeading{
+        font-size: 10rem !important;
+    }
+
+    .container .labelBx{
+        gap: 2rem;
+    }
+
+    .gridContainer .gridBx .contentBx .arrowBx{
+        width: 20px;
+        height: 20px;
+    }
+
+    .gridContainer .gridBx .contentBx .content h3{
+        font-size: 1.4rem;
+    }
+
+    .container .navigation .nav-items {
+        flex-direction: column;
+        background-color: var(--dark-color-2);
+        width: 100%;
+        gap: 1rem;
+        padding: var(--common-padding);
+    }
+
+    .container .navigation .nav-items .nav-item a{
+        color: var(--primary-color);
+    }
+
+    .subHeading::before{
+        display: none;
+    }
+}
+
+@media(max-width: 320px){
+    .mainHeading{
+        font-size: 8rem !important;
+    }
+}
